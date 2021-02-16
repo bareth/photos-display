@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import unsplash from '../api/unsplash.js';
 import SearchBox from './SearchBox';
-import Images from './Images';
+import ImageList from './ImageList';
 
 class App extends React.Component {
     state = {images: []}
@@ -18,9 +18,9 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="ui container">
                 <SearchBox onSearchTerm={this.onSearchTerm}/>
-                <Images images={this.state.images} />
+                <ImageList images={this.state.images} />   
             </div>
         ) 
     }
