@@ -6,7 +6,7 @@ class SearchBox extends React.Component {
 
     onSubmit = event => {
         event.preventDefault();
-        console.log(this.state.term);
+        this.props.onSearchTerm(this.state.term);
     }
     
     
